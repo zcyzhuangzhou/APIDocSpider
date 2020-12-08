@@ -105,6 +105,8 @@ venv.bak/
 
 .idea/
 output/
+data/
+BackUpData/
 
 # ignore office doc
 ~*.xlsx
