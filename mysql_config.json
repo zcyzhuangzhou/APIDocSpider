@@ -1,0 +1,19 @@
+[
+  {
+    "server_name": "33RootServer",
+    "server_id": 1,
+    "host": "10.176.64.33",
+    "user": "root",
+    "password": "123456",
+    "description": "the server for all work",
+    "charset":"utf8mb4",
+    "databases": [
+      {
+        "database_id": 1,
+        "database_name": "spring",
+        "description": "spring database",
+        "charset":"utf8mb4"
+      }
+    ]
+  }
+]
