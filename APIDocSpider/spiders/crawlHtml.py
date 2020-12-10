@@ -16,6 +16,10 @@ import scrapy
 
 from APIDocSpider.items import ApidocspiderItem
 
+HTML_TYPE = {
+    "package_html": 1,
+    "class_html": 2
+}
 
 class CrawlPackageHtml(scrapy.Spider):
     name = 'crawlPackageHtml'
@@ -32,6 +36,7 @@ class CrawlPackageHtml(scrapy.Spider):
         item["qualified_name"] = self.url_list[self.offset]["qualified_name"]
         item["url"] = response.url
         item["html"] = response.text
+        item["html_type"] = HTML_TYPE["package_html"]
         yield item
 
         # Construct next new URL to crawl class API based on the crawled package API name
@@ -59,6 +64,7 @@ class CrawlClassHtml(scrapy.Spider):
         item["qualified_name"] = self.url_list[self.offset]["qualified_name"]
         item["url"] = response.url
         item["html"] = response.text
+        item["html_type"] = HTML_TYPE["class_html"]
         yield item
 
         # Construct next new URL based on the crawled package API name to crawl API.

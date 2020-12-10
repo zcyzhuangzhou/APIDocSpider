@@ -21,11 +21,13 @@ class ApiDocHtmlModel(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True, name="Id")
     qualified_name = Column(String(255), name="QualifiedName")
+    html_type = Column(Integer,  name="HtmlType")
     url = Column(String(255), name="Url")
     html = Column(Text(), name="Html")
 
     def __init__(self, item):
         self.qualified_name = item["qualified_name"]
+        self.html_type = item["html_type"]
         self.url = item["url"]
         self.html = item["html"]
 
