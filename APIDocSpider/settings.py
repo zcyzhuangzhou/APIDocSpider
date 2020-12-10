@@ -63,7 +63,8 @@ ROBOTSTXT_OBEY = False
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'APIDocSpider.pipelines.ApidocspiderPipeline': 300,
+   'APIDocSpider.pipelines.HtmlSpiderPipeline': 200,
+   # 'APIDocSpider.pipelines.ApidocspiderPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
