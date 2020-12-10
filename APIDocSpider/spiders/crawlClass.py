@@ -26,7 +26,7 @@ class CrawlClassSpider(scrapy.Spider):
     name = 'crawlClass'
 
     # Construct the URL to crawl class API based on the crawled package API name
-    with open('./APIDocSpider/data/package.json', 'r') as f:
+    with open('./APIDocSpider/output/package.json', 'r') as f:
         url_list = json.load(f)
     offset = 0
     baseURL = 'https://docs.spring.io/spring-framework/docs/current/javadoc-api/'

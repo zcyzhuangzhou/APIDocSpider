@@ -37,7 +37,7 @@ class CrawlClassSpider(scrapy.Spider):
     name = 'crawlAttribute'
 
     # Construct the URL based on the crawled class API name to crawl field, method, enum constant and so on.
-    with open('./APIDocSpider/data/class.json', 'r') as f:
+    with open('./APIDocSpider/output/class.json', 'r') as f:
         url_list = json.load(f)
     offset = 0
     baseURL = 'https://docs.spring.io/spring-framework/docs/current/javadoc-api/'
